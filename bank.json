@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "institutionId": "scb",
   "country": "TH",
   "displayName": "Siam Commercial Bank",
@@ -18,7 +18,7 @@
         "thai-statements-v1"
       ],
       "sha256": "5019fd27ba8590e7335424ef105610ede65b205e2888d7e08cd43f267e15448e",
-      "path": "templates/th/scb/savings.v1.json",
+      "path": "templates/savings.v1.json",
       "changeSummary": "Initial reviewed bundled recipe."
     }
   ]

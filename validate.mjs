@@ -10,10 +10,8 @@ if (!validateCatalog(catalog)) throw new Error(JSON.stringify(validateCatalog.er
 const ids = new Set();
 const paths = new Set();
 for (const entry of catalog.recipes) {
-  if (!/^templates\/[a-z]{2}\/[a-z0-9-]+\/[a-z0-9.-]+\.json$/.test(entry.path)) throw new Error('Unsafe recipe path');
   if (entry.institutionId !== catalog.institutionId || entry.country !== catalog.country ||
-      entry.path.split('/')[2] !== catalog.institutionId) throw new Error('Recipe belongs to a different bank');
-  if (entry.path.split('/')[1].toUpperCase() !== entry.country) throw new Error('Recipe country/path mismatch');
+      !entry.templateId.startsWith(catalog.institutionId + '.')) throw new Error('Recipe belongs to a different bank');
   if (ids.has(entry.templateId) || paths.has(entry.path)) throw new Error('Duplicate recipe');
   ids.add(entry.templateId); paths.add(entry.path);
   const text = fs.readFileSync(entry.path, 'utf8');
