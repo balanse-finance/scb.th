@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "templateId": "scb.savings.v1",
+      "extracted": {
+        "pageCount": 1,
+        "text": "STATEMENT OF SAVING ACCOUNT Account No. SCB ไทยพาณิชย์ SIAM COMMERCIAL BANK ไทยพาณิชย์ รายการเดินบัญชี SCB\n01/01/2026 X2 TEST 42.00 958.00 SYNTHETIC PURCHASE SYNTHETIC SAMPLE",
+        "items": [
+          {
+            "pageNumber": 1,
+            "text": "01/01/2026",
+            "x": 26,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          },
+          {
+            "pageNumber": 1,
+            "text": "X2",
+            "x": 95.9,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          },
+          {
+            "pageNumber": 1,
+            "text": "TEST",
+            "x": 121,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          },
+          {
+            "pageNumber": 1,
+            "text": "42.00",
+            "x": 191,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          },
+          {
+            "pageNumber": 1,
+            "text": "958.00",
+            "x": 331,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          },
+          {
+            "pageNumber": 1,
+            "text": "SYNTHETIC PURCHASE SYNTHETIC SAMPLE",
+            "x": 394.9,
+            "y": 352.5,
+            "width": 20,
+            "height": 10
+          }
+        ]
+      },
+      "expected": [
+        {
+          "amountMinor": 4200,
+          "transactionDateTime": "2026-01-01T00:00:00+07:00",
+          "direction": "debit"
+        }
+      ]
+    }
+  ]
+}

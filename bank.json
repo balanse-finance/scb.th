@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "institutionId": "scb",
+  "country": "TH",
+  "displayName": "Siam Commercial Bank",
+  "recipes": [
+    {
+      "templateId": "scb.savings.v1",
+      "institutionId": "scb",
+      "institutionName": "Siam Commercial Bank",
+      "displayName": "Siam Commercial Bank bank account",
+      "country": "TH",
+      "statementKind": "bank_account",
+      "revision": 1,
+      "schemaVersion": 1,
+      "requiredCapabilities": [
+        "thai-statements-v1"
+      ],
+      "sha256": "5019fd27ba8590e7335424ef105610ede65b205e2888d7e08cd43f267e15448e",
+      "path": "templates/th/scb/savings.v1.json",
+      "changeSummary": "Initial reviewed bundled recipe."
+    }
+  ]
+}
